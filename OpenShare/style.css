@@ -1,0 +1,31 @@
+#root,body,html{
+  font-family:syste-ui;
+  background:#9AECDB;
+  height:100%;
+  padding:0;
+  margin:0;
+}
+
+.app{
+  height:100%;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.upload-container{
+  background-color:#ffffff;
+  border-radius:20px;
+  box-shadow:0px 20px 20px #2C3A4740;
+}
+
+.upload-section{
+  width:500px;
+  min-height:260px;
+  border:2px dashed #58B19F;
+  margin:30px;
+  border-radius:20px;
+}
