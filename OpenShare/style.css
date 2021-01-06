@@ -1,9 +1,16 @@
+@font-face{
+  src:url(Fonts/Poppins-Regular.ttf);
+  font-family:poppins;
+}
+
 #root,body,html{
-  font-family:system-ui;
   background:#9AECDB;
   height:100%;
   padding:0;
   margin:0;
+  font-family:system-ui; 
+  font-weight:600;
+  font-size:16px;
 }
 
 .app{
@@ -44,6 +51,9 @@
 }
 
 .upload-text{
-  padding-top:15px;
+  padding-top:25px;
+  font-weight:600;
+  font-size:16px;
+  font-family:'poppins','system-ui';
 }
 
