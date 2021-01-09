@@ -56,18 +56,18 @@
   transition: all 0.3s ease-in-out;
 }
 
-.folder:hover{
+.folder{
   transition:translateY(-8px);
 }
 
-.folder:hover .file{
+.folder .file{
   transform:translate(-50%,0%);  
 }
 
-.folder:hover .folder_front{
+.dragged .folder .folder_front{
   transform:skew(15deg)scaleY(0.6);  
 }
 
-.folder:hover .right{
+.dragged .folder .right{
   transform:skew(-15deg)scaleY(0.6);  
 }
