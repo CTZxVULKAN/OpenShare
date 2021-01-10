@@ -71,3 +71,9 @@
 .dragged .folder .right{
   transform:skew(-15deg)scaleY(0.6);  
 }
+
+.dragged.upload-section{
+  background:#33d9b240;
+  border-color:#218c74;
+  
+}
