@@ -59,3 +59,11 @@
   font-family:'poppins','system-ui';
 }
 
+.file_input{
+  display: none;
+}
+
+.uploadBtn{
+  color:#29AB87;
+  cursor:pointer;
+}
