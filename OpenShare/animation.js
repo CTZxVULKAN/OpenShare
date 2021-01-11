@@ -1,3 +1,4 @@
+// This file handles all logic required for the animations.
 const dropZone = document.querySelector(".upload-section")
 
 dropZone.addEventListener("dragover", (e) => {

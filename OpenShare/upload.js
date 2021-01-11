@@ -1,3 +1,4 @@
+// This file handles file input and upload.
 const fileInput = document.querySelector(".file_input");
 const fileUpload = document.querySelector(".uploadBtn");
 
