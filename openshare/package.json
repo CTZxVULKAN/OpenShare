@@ -5,5 +5,15 @@
   "main": "server.js",
   "repository": "https://github.com/BiswasJishnu/OpenShare/tree/main",
   "author": "Jishnu Biswas",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "srcipts": {
+    "dev": "nodemon server",
+    "serve": "node server"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
