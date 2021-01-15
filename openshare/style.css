@@ -1,0 +1,71 @@
+/*This file contains all css for how the page looks.*/
+@font-face{
+  src:url(Fonts/Poppins-Regular.ttf);
+  font-family:poppins;
+}
+
+#root,body,html{
+  background:#9AECDB;
+  height:100%;
+  padding:0;
+  margin:0;
+  font-family:system-ui; 
+  font-weight:600;
+  font-size:16px;
+}
+
+.app{
+  height:100%;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.upload-container{
+  background-color:#ffffff;
+  border-radius:25px;
+  box-shadow:0px 20px 20px #2C3A4740;
+}
+
+.upload-section{
+  width:500px;
+  min-height:270px;
+  border:2px dashed #58B19F;
+  margin:25px;
+  border-radius:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  transition: all .2s ease-in-out;
+}
+
+
+.upload-animation{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.upload-text{
+  padding-top:25px;
+  font-weight:600;
+  font-size:16px;
+  font-family:'poppins','system-ui';
+}
+
+.file_input{
+  display: none;
+}
+
+.uploadBtn{
+  color:#29AB87;
+  cursor:pointer;
+}
+
