@@ -2,11 +2,11 @@
   "name": "openshare",
   "version": "1.0.0",
   "description": "An opensource application to generate temporary links to share files.",
-  "main": "server.js",
+  "main": "index.js",
   "repository": "https://github.com/BiswasJishnu/OpenShare/tree/main",
   "author": "Jishnu Biswas",
   "license": "GPL-3.0",
-  "srcipts": {
+  "scripts": {
     "dev": "nodemon server",
     "serve": "node server"
   },
