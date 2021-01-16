@@ -1,3 +1,3 @@
 # OpenShare
 
-![Project Banner](./repo/Repobanner.png)
+![Project Banner](./repo/RepoBanner.png)
