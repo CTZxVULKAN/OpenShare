@@ -1,2 +1,3 @@
 # OpenShare
-An opensource file shareing platform
+
+![Project Banner](./repo/RepoBanner.png)
