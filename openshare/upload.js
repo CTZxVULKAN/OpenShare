@@ -18,6 +18,10 @@ dropZone.addEventListener("drop", (e) => {
   }
 });
 
+fileInput.addEventListener("change", () => {
+  uploadFile();
+});
+
 const uploadFile = () => {
   const file = fileInput.files[0];
   const formData = new FormData();
