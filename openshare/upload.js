@@ -1,7 +1,10 @@
 // This file handles file input and upload.
 const fileInput = document.querySelector(".file_input");
 const fileUpload = document.querySelector(".uploadBtn");
+const Progressbar = document.querySelector(".progressbar");
 const bgProgress = document.querySelector(".bg-progress");
+const fgProgress = document.querySelector(".fg-progress");
+const progressValue = document.querySelector(".progress-status");
 const host = "https://innshare.herokuapp.com";
 const uploadURL = `${host}/api/files`;
 
@@ -24,6 +27,7 @@ fileInput.addEventListener("change", () => {
 });
 
 const uploadFile = () => {
+  Progressbar.style.display = "block";
   const file = fileInput.files[0];
   const formData = new FormData();
   formData.append("myfile", file);
@@ -43,4 +47,6 @@ const uploadFile = () => {
 const updateProgressbar = (e) => {
   const progress = Math.round((e.loaded / e.total) * 100);
   bgProgress.style.width = `${progress}%`
+  fgProgress.style.transform = `scaleX(${progress / 100})`
+  progressValue.innerText = progress;
 };
