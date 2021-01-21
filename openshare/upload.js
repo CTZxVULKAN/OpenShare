@@ -35,7 +35,7 @@ const uploadFile = () => {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
-      console.log(xhr.response);
+      displayLink(JSON.parse(xhr.response));
     }
   };
 
@@ -49,4 +49,9 @@ const updateProgressbar = (e) => {
   bgProgress.style.width = `${progress}%`
   fgProgress.style.transform = `scaleX(${progress / 100})`
   progressValue.innerText = progress;
+};
+
+const displayLink = ({file}) => {
+  console.log(file);
+  Progressbar.style.display = "none";
 };
