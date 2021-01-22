@@ -5,6 +5,8 @@ const Progressbar = document.querySelector(".progressbar");
 const bgProgress = document.querySelector(".bg-progress");
 const fgProgress = document.querySelector(".fg-progress");
 const progressValue = document.querySelector(".progress-status");
+const outputContainer = document.querySelector(".output");
+const fileURL = document.querySelector("#fileURL");
 const host = "https://innshare.herokuapp.com";
 const uploadURL = `${host}/api/files`;
 
@@ -51,7 +53,9 @@ const updateProgressbar = (e) => {
   progressValue.innerText = progress;
 };
 
-const displayLink = ({file}) => {
-  console.log(file);
+const displayLink = ({file: url}) => {
+  console.log(url);
   Progressbar.style.display = "none";
+  outputContainer.style.display = "block";
+  fileURL.value = url;
 };
