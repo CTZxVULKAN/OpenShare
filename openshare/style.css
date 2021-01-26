@@ -166,13 +166,13 @@
   color:#0000008c;
 }
 
-.link-container img{
+.link-container img{ 
   position:absolute;
-  height:22px;
+  height:20px;
   width:30px;
   right:1px;
-  top:17px;
+  top:16px;
   cursor:pointer;
+  background: #C1DBCE;
+  padding: 2px 2px 2px 2px;
 }
-
-
