@@ -118,15 +118,10 @@
   transition: transform .25s linear;
 }
 
-.link-text{
-  font-size:16px;
+.link-info{
+  font-size:15px;
   font-family:'poppins','system-ui';
   font-weight:600;
-}
-
-.output{
-  width:500px;
-  margin-bottom:10px;
 }
 
 .output .link-container{
@@ -175,4 +170,10 @@
   cursor:pointer;
   background: #C1DBCE;
   padding: 2px 2px 2px 2px;
+}
+
+.close img{
+  height:80px;
+  width:40px;
+  cursor:pointer;
 }
