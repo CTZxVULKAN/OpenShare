@@ -8,6 +8,7 @@ const progressValue = document.querySelector(".progress-status");
 const outputContainer = document.querySelector(".output");
 const fileURL = document.querySelector("#fileURL");
 const copyBtn = document.querySelector("#copyBtn");
+const closeBtn = document.querySelector("#closeBtn");
 const host = "https://innshare.herokuapp.com";
 const uploadURL = `${host}/api/files`;
 
@@ -32,6 +33,10 @@ fileInput.addEventListener("change", () => {
 copyBtn.addEventListener("click", () => {
   fileURL.select();
   document.execCommand("copy");
+});
+
+closeBtn.addEventListener('click', () => {
+  outputContainer.style.display = "none";
 });
 
 const uploadFile = () => {
