@@ -9,6 +9,8 @@ const outputContainer = document.querySelector(".output");
 const fileURL = document.querySelector("#fileURL");
 const copyBtn = document.querySelector("#copyBtn");
 const closeBtn = document.querySelector("#closeBtn");
+const alertMsg = document.querySelector(".alert");
+const maxAllowedSize = 100 * 1024 * 1024; //100mb
 const host = "https://innshare.herokuapp.com";
 const uploadURL = `${host}/api/files`;
 
@@ -33,6 +35,7 @@ fileInput.addEventListener("change", () => {
 copyBtn.addEventListener("click", () => {
   fileURL.select();
   document.execCommand("copy");
+  displayAlert("Link Copied!");
 });
 
 closeBtn.addEventListener('click', () => {
@@ -53,6 +56,12 @@ const uploadFile = () => {
   };
 
   xhr.upload.onprogress = updateProgressbar;
+
+  xhr.upload.onerror = function () {
+    displayAlert(`Error in upload: ${xhr.status}.`);
+    fileInput.value = ""; // reset the input
+  };
+
   xhr.open("POST", uploadURL);
   xhr.send(formData);
 };
@@ -69,4 +78,15 @@ const displayLink = ({file: url}) => {
   Progressbar.style.display = "none";
   outputContainer.style.display = "block";
   fileURL.value = url;
+};
+
+let alertTimer;
+// the toast function
+const displayAlert = (msg) => {
+  alertMsg.innerText = msg;
+  alertMsg.style.transform = "translate(-50%,0)";
+  clearTimeout(alertTimer);
+  alertTimer = setTimeout(() => {
+    alertMsg.style.transform = "translate(-50%,60px)";
+  }, 1500);
 };
