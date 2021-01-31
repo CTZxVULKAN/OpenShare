@@ -43,6 +43,12 @@ closeBtn.addEventListener('click', () => {
 });
 
 const uploadFile = () => {
+
+  if (containerStatus == "opened") {
+    outputContainer.style.display = "none";
+    containerStatus = "closed";
+  }
+
   Progressbar.style.display = "block";
   const file = fileInput.files[0];
   const formData = new FormData();
@@ -84,11 +90,13 @@ const resetProgressbar = () => {
   Progressbar.style.display = "none";
 };
 
+let containerStatus;
 const displayLink = ({file: url}) => {
   console.log(url);
   Progressbar.style.display = "none";
   outputContainer.style.display = "block";
   fileURL.value = url;
+  containerStatus = "opened";
 };
 
 let alertTimer;
