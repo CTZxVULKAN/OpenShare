@@ -58,7 +58,7 @@ const uploadFile = () => {
   xhr.upload.onprogress = updateProgressbar;
 
   xhr.upload.onerror = function () {
-    displayAlert(`Error in upload: ${xhr.status}.`);
+    displayAlert("Error in upload");
     fileInput.value = ""; // reset the input
   };
 
