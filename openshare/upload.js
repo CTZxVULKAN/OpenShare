@@ -62,6 +62,10 @@ const uploadFile = () => {
     fileInput.value = ""; // reset the input
   };
 
+  xhr.upload.onload = function () {
+    resetProgressbar();
+  };
+
   xhr.open("POST", uploadURL);
   xhr.send(formData);
 };
@@ -71,6 +75,13 @@ const updateProgressbar = (e) => {
   bgProgress.style.width = `${progress}%`
   fgProgress.style.transform = `scaleX(${progress / 100})`
   progressValue.innerText = progress;
+};
+
+const resetProgressbar = () => {
+  progress = 0;
+  bgProgress.style.width = `${progress}%`
+  fgProgress.style.transform = `scaleX(${progress / 100})`
+  Progressbar.style.display = "none";
 };
 
 const displayLink = ({file: url}) => {
