@@ -66,6 +66,8 @@ const uploadFile = () => {
   xhr.upload.onerror = function () {
     displayAlert("Error in upload");
     fileInput.value = ""; // reset the input
+    Progressbar.style.display = "none";
+    outputContainer.style.display = "none";
   };
 
   xhr.upload.onload = function () {
@@ -78,15 +80,15 @@ const uploadFile = () => {
 
 const updateProgressbar = (e) => {
   const progress = Math.round((e.loaded / e.total) * 100);
-  bgProgress.style.width = `${progress}%`
-  fgProgress.style.transform = `scaleX(${progress / 100})`
+  bgProgress.style.width = `${progress}%`;
+  fgProgress.style.transform = `scaleX(${progress / 100})`;
   progressValue.innerText = progress;
 };
 
 const resetProgressbar = () => {
   progress = 0;
-  bgProgress.style.width = `${progress}%`
-  fgProgress.style.transform = `scaleX(${progress / 100})`
+  bgProgress.style.width = `${progress}%`;
+  fgProgress.style.transform = `scaleX(${progress / 100})`;
   Progressbar.style.display = "none";
 };
 
