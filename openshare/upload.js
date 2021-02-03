@@ -10,7 +10,7 @@ const fileURL = document.querySelector("#fileURL");
 const copyBtn = document.querySelector("#copyBtn");
 const closeBtn = document.querySelector("#closeBtn");
 const alertMsg = document.querySelector(".alert");
-const maxAllowedSize = 100 * 1024 * 1024; //100mb
+const maxUploadSize = 50 * 1024 * 1024; //50mb
 const host = "https://innshare.herokuapp.com";
 const uploadURL = `${host}/api/files`;
 
@@ -20,15 +20,27 @@ fileUpload.addEventListener("click", () => {
 
 dropZone.addEventListener("drop", (e) => {
   e.preventDefault();
+  //   console.log("dropped", e.dataTransfer.files[0].name);
   const files = e.dataTransfer.files;
-  //console.log(files);
-  if (files.length) {
-    fileInput.files = files;
-    uploadFile();
+  if (files.length === 1) {
+    if (files[0].size < maxUploadSize) {
+      fileInput.files = files;
+      uploadFile();
+    } else {
+      displayAlert("Max file size : 50MB");
+    }
+  } else if (files.length > 1) {
+    displayAlert("Can't upload multiple files");
   }
 });
 
+
 fileInput.addEventListener("change", () => {
+  if (fileInput.files[0].size > maxUploadSize) {
+    displayAlert("Max file size is 50MB");
+    fileInput.value = ""; // reset the input
+    return;
+  }
   uploadFile();
 });
 
