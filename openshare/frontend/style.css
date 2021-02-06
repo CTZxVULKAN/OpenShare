@@ -1,6 +1,6 @@
 /*This file contains all css for how the page looks.*/
 @font-face{
-  src:url(Fonts/Poppins-Regular.ttf);
+  src:url(./assets/fonts/Poppins-Regular.ttf);
   font-family:poppins;
 }
 
