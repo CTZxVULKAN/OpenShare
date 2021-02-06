@@ -7,8 +7,8 @@
   "author": "Jishnu Biswas",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "nodemon server",
-    "serve": "node server"
+    "dev": "nodemon ./backend/server",
+    "serve": "node .backend/server"
   },
   "dependencies": {
     "express": "^4.17.1"
