@@ -10,6 +10,8 @@ app.use(express.static(pagePath));
 const connectDB = require('./config/db');
 connectDB();
 
+app.use('/api/files', require('./routes/files'));
+
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}. Visit http://localhost:${PORT} to view.`);
