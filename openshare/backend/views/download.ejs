@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <section class="download">
+        <% if(locals.error){ %>
+        <h4><%= locals.error %> 😏</h4>
+        <% } else { %>
+        <h2>Your file is ready to download</h2>
+        <p>Link expires in 24 hours</p>
+        <div class="download__meta">
+            <h4><%= fileName %></h4>
+            <small><%= parseInt(fileSize/1000) %> KB</small>
+        </div>
+        <div class="send-btn-container">
+            <a href="<%= downloadLink %>">Download file</a>
+        </div>
+        <% } %>
+    </section>
+
+
+</body>
+
+</html>
