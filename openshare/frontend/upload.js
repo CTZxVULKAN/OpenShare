@@ -11,7 +11,8 @@ const copyBtn = document.querySelector("#copyBtn");
 const closeBtn = document.querySelector("#closeBtn");
 const alertMsg = document.querySelector(".alert");
 const maxUploadSize = 50 * 1024 * 1024; //50mb
-const host = "https://innshare.herokuapp.com";
+//const host = "https://innshare.herokuapp.com";
+const host = "http://localhost:3000";
 const uploadURL = `${host}/api/files`;
 
 fileUpload.addEventListener("click", () => {
