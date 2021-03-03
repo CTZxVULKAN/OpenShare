@@ -238,4 +238,31 @@ section.download-section{
   transition: all .2s ease-in-out;
 }
 
+.download-text{
+  font-family:poppins; 
+  font-weight:600;
+  font-size:16px;
+}
 
+.download-meta{
+  font-family:poppins; 
+  font-weight:600;
+  font-size:16px;
+  margin-bottom:10px;
+}
+
+.downloadBtn{
+ margin-top:20px;
+}
+
+.downloadLink{
+  margin-top:10px;
+  background:#2ecc71;
+  color:#fff;
+  border-radius:5px;
+  padding:13px; 
+  font-family:poppins; 
+  font-weight:600;
+  font-size:14px;
+  text-decoration:none;
+}
