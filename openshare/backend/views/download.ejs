@@ -16,10 +16,10 @@
              <% if(locals.error){ %>
                     <h4><%= locals.error%></h4>
                 <% } else { %>
-
-                <div class="download-meta">
+                        
+               <div class="download-meta">
                     <h4><%= fileName %></h4>
-                    <small><%= parseInt(fileSize/1000) %> KB</small>
+                    <h5><%= parseInt(fileSize/1000) %> KB</h5>
                </div>
 
                 <h2 class="download-text">Your file is ready to download</h2>
