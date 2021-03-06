@@ -248,7 +248,11 @@ section.download-section{
   font-family:poppins; 
   font-weight:600;
   font-size:16px;
-  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
 }
 
 .downloadBtn{
