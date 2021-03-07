@@ -17,8 +17,11 @@ app.set('view engine', 'ejs');
 // route to handle post requests.
 app.use('/api/files', require('./routes/files'));
 
-// route to handle get requests.
+// route for rendering download page.
 app.use('/files', require('./routes/render'));
+
+// route to handle get requests
+app.use('/files/download', require('./routes/download'));
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}. Visit http://localhost:${PORT} to view.`);
