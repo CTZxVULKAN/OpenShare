@@ -214,7 +214,17 @@
   user-select: none; /* Standard */
 }
 
+
+
+
 /* code for download page */
+
+.download-icon{
+  width:100px;
+  height:80px;
+}
+
+
 .download-container{
   background-color:#ffffff;
   border-radius:25px;
@@ -227,7 +237,7 @@
 
 section.download-section{
   width:500px;
-  min-height:270px;
+  min-height:515px;
   border:2px dashed #58B19F;
   margin:25px;
   border-radius:20px;
@@ -261,8 +271,8 @@ section.download-section{
 
 .downloadLink{
   margin-top:10px;
-  background:#58B19F;
-  color:#fff;
+  background:#55E6C1;
+  color:#0000008c;
   border-radius:5px;
   padding:13px; 
   font-family:poppins; 
