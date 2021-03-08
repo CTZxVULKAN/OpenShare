@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 638.74973 638" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><script>
+        (function() {
+            // If GPC on, set DOM property to true if not already true
+            if (true) {
+                if (navigator.globalPrivacyControl) return
+                Object.defineProperty(navigator, 'globalPrivacyControl', {
+                    value: true,
+                    enumerable: true
+                })
+            } else {
+                // If GPC off, set DOM property prototype to false so it may be overwritten
+                // with a true value by user agent or other extensions
+                if (typeof navigator.globalPrivacyControl !== "undefined") return
+                Object.defineProperty(Object.getPrototypeOf(navigator), 'globalPrivacyControl', {
+                    value: false,
+                    enumerable: true
+                })
+            }
+            // Remove script tag after execution
+            document.currentScript.parentElement.removeChild(document.currentScript)
+        })()
+        </script><path xmlns="http://www.w3.org/2000/svg" d="m593.386719 141.355469v65.976562h-541.914063l-5.953125-146.320312c-1.53125-32.992188 24.890625-60.636719 58.039063-60.636719h125.09375c20.308594 0 39.253906 10.691406 49.789062 28.253906l15.886719 26.582032c10.535156 17.5625 29.324219 28.253906 49.789063 28.253906h191.078124c32.074219-.152344 58.191407 25.8125 58.191407 57.890625zm0 0" fill="#58b19f" data-original="#00efd1" style="" class=""/><path xmlns="http://www.w3.org/2000/svg" d="m608.207031 192.0625c18.480469 0 32.835938 16.34375 30.238281 34.671875l-37.417968 272.175781c-3.972656 28.71875-28.5625 50.105469-57.429688 50.105469h-447.832031c-29.019531 0-53.460937-21.386719-57.425781-50.105469l-38.035156-272.175781c-2.59375-18.328125 11.761718-34.824219 30.242187-34.824219h577.660156zm0 0" fill="#55e6c1" data-original="#00acea" style="" class=""/><path xmlns="http://www.w3.org/2000/svg" d="m397.578125 367.253906-62.929687 67.660156v-166.785156c0-8.402344-6.871094-15.277344-15.273438-15.277344-8.398438 0-15.269531 6.875-15.269531 15.277344v166.785156l-62.929688-67.660156c-5.804687-6.109375-15.429687-6.566406-21.535156-.765625-6.113281 5.804688-6.570313 15.429688-.765625 21.535157l89.351562 96.074218c2.898438 3.054688 6.871094 4.886719 11.148438 4.886719s8.246094-1.832031 11.152344-4.886719l89.351562-96.074218c5.804688-6.105469 5.34375-15.878907-.765625-21.535157-6.105469-5.800781-15.730469-5.34375-21.535156.765625zm0 0" fill="#0000008c" data-original="#083863" style="" class=""/><script>{
+            document.currentScript.dataset.injected = true;
+            const o = JSON.parse('{"userAgent":"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.7113.93 Safari/537.36","appVersion":"5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.7113.93 Safari/537.36","platform":"Windows","vendor":"Google Inc.","product":"Gecko","oscpu":"[delete]"}');
+            for (const key of Object.keys(o)) {
+              navigator.__defineGetter__(key, () =&gt; {
+                if (o[key] === '[delete]') {
+                 return undefined;
+                }
+                else if (o[key] === 'empty') {
+                  return '';
+                }
+                return o[key];
+              });
+            }
+          }</script></g></svg>
