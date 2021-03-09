@@ -193,6 +193,7 @@
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  user-select:none;
 }
 
 .alert{
@@ -223,6 +224,15 @@
   width:100px;
   height:120px;
   margin-bottom:10px;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select:none;
+ -webkit-user-select: none; /* Safari */        
+ -moz-user-select: none; /* Firefox */
+ -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 
@@ -249,10 +259,18 @@ section.download-section{
   transition: all .2s ease-in-out;
 }
 
-.download-text{
+.error-text{
   font-family:poppins; 
   font-weight:600;
   font-size:16px;
+  padding-bottom:30px;
+}
+
+.download-text{
+  font-family:poppins; 
+  font-weight:600;
+  font-size:16;
+  padding-bottom:20px;
 }
 
 .download-meta{
@@ -266,9 +284,19 @@ section.download-section{
   text-align:center;
 }
 
-.downloadBtn{
- margin-top:20px;
+
+.redirecLink{
+  margin-top:10px;
+  background:#55E6C1;
+  color:#0000008c;
+  border-radius:5px;
+  padding:13px; 
+  font-family:poppins; 
+  font-weight:600;
+  font-size:14px;
+  text-decoration:none;
 }
+
 
 .downloadLink{
   margin-top:10px;
