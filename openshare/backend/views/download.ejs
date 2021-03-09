@@ -14,7 +14,13 @@
 
          <section class="download-section">
              <% if(locals.error){ %>
-                    <h4><%= locals.error%></h4>
+                    <img src="/assets/icons/error.svg" alt="download-icon" class="download-icon">
+                    <h4 class="error-text"><%= locals.error%></h4>
+
+                    <div class="redirectBtn">
+                        <a class="redirecLink" href="http://localhost:3000/">Go Back</a>
+                    </div>
+
                 <% } else { %>
                         
                   <div class="download-meta">
