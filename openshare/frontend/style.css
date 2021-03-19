@@ -24,6 +24,15 @@
   align-items:center;
 }
 
+.credit{
+ position:absolute;
+ bottom:12px;
+ left:20px;
+ font-family:poppins; 
+ font-weight:600;
+ font-size:14px;
+}
+
 .upload-container{
   background-color:#ffffff;
   border-radius:25px;
